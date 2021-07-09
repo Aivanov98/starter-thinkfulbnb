@@ -176,24 +176,75 @@ footer p {
 
 /* -------  Media Query ------- */
 @media all and (min-width: 800px) {
-  header {
+header {
     display: flex;
     justify-content: space-between;
   }
-  header h1 {
+header h1 {
     margin: 14px 0;
     padding-top:6px;
     font-size: 36px;
   }
 
-  header nav {
+header nav {
       margin-top: 14px;
     }
-
-    header nav ul li a:hover {
+header nav ul li a:hover {
       color: #bdbdbd;
     }
-  
+.section{
+        display: flex;
+        flex-direction: column;
+        width: 80%;
+        
+    }
+    
+p {
+        font-size: 12px;
+        width: 50%;
+        height: 200px;
+    }
+    
+.p-about{
+        font-size: 12px;
+        width: 100%;
+        height: 100px;
+        padding: 10px;
+    }
+    
+.group{
+        display: grid;
+        grid-template-columns: 30% 30% 40%;
+        grid-gap: 10px;
+        
+    }
+    
+.group-two {
+        display: grid;
+        width: 100%;
+        grid-template-columns: 50% 50%;
+        grid-gap: 10px;
+      
+    }
+    
+ .group-two img{
+        width: 100%;
+    }
+
+.form-item {
+  display: flex;
+  padding: 10px;
+ 
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-content: center;
+}
+}
   form {
     display: flex;
     align-items: center;
