@@ -9,6 +9,8 @@ h2 {
   font-weight: 400;
   margin: 0 10px 10px 10px;
   text-align: center;
+  display: flex;
+  justify-content: center;
 }
 
 h3 {
@@ -19,6 +21,7 @@ h3 {
 p {
   line-height: 1.5em;
   margin: 0;
+  font-size: 22px;
 }
 
 section {
@@ -33,14 +36,36 @@ section.alternate-background {
 main img {
   width: 100px;
 }
+.group img {
+  width: 100%;
+  height: auto;
+  padding: 10px;
+}
+
+ .group-two img {
+   width:100%;
+   height: auto;
+   padding: 10px;
+}
 
 /* ---  Groups & Items --- */
 
 .group {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
 }
-
+.group-two {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-content: flex-start;
+  align-items: flex-start;
+  }
 .item {
   flex: 1;
   margin: 10px;
@@ -48,13 +73,21 @@ main img {
 
 .item-double {
   flex: 2;
+  margin 10px;
 }
+.listContain {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-content: center;
+  align-items: center;
+  flex: 0 1 auto;
 
 /* -------  Navigation ------- */
 
 header {
   background-color: #ff385c;
-  padding: 20px 20px 0 20px;
+  padding: 20px 20px 20px;
   text-align: center;
 }
 
@@ -64,8 +97,17 @@ header {
   color: #fff;
 }
 
+header nav {
+  display:flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 0px auto;
+  }
+  
 header nav ul li {
   list-style-type: none;
+  display: flex;
+  justify-content: center;
 }
 
 header nav ul li a {
@@ -78,7 +120,23 @@ header nav ul li a:hover {
   color: #bdbdbd;
   text-decoration: none;
 }
+.nav-box {
+  display: flex;
+  flex-direction: column;
+}
 
+.container {
+  display: flex;
+  flex-direction: column;
+  flex-wrap; wrap;
+  justify-content: space-between;
+  align-content: center;
+}
+.form-item {
+  flex-direction: row;
+  height: auto;
+  align-self:auto;
+  margin-bottom: 2%;
 /* -------  Search Form ------- */
 form {
   border: 2px solid #ff385c;
@@ -117,12 +175,25 @@ footer p {
 }
 
 /* -------  Media Query ------- */
-@media all and (min-width: 480px) {
+@media all and (min-width: 800px) {
   header {
     display: flex;
-    flex-direction: row;
     justify-content: space-between;
   }
+  header h1 {
+    margin: 14px 0;
+    padding-top:6px;
+    font-size: 36px;
+  }
+
+  header nav {
+      margin-top: 14px;
+    }
+
+    header nav ul li a:hover {
+      color: #bdbdbd;
+    }
+  
   form {
     display: flex;
     align-items: center;
